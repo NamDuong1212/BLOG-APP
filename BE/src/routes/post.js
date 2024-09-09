@@ -7,6 +7,7 @@ postRouter.post('/create/:userID', UserMDW.validateToken, UserMDW.isAdmin, postC
 
 postRouter.get('/getPost', postCTL.getPost)
 postRouter.get('/getPostByID/:postID', postCTL.getPostById)
+postRouter.get('/getUserPost/:userID', UserMDW.validateToken, postCTL.getUserPost)
 
 postRouter.put('/updatePost/:userID/:postID', UserMDW.validateToken, UserMDW.isAdmin, postCTL.update)
 postRouter.delete('/deletePost/:userID/:postID', UserMDW.validateToken, UserMDW.isAdmin, postCTL.delete)
