@@ -62,8 +62,8 @@ const UserMDW = {
         },
         isAdmin: async (req, res, next) => {
             try{
-              const { userID } = req.params;
-              const user = await UserModel.findById(userID);
+              const { id } = req.user;
+              const user = await UserModel.findById(id);
               if(!user) throw new Error("User don't existed!")
               if(user.isAdmin === false) throw new Error("Unauthorize access!")
               next();

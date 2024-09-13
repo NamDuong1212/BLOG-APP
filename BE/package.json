@@ -1,7 +1,7 @@
 {
-  "name": "cosmetic",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "cosmetic web",
+  "description": "blog web",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "blog": "file:",
     "cloudinary": "^2.4.0",
     "cors": "^2.8.5",
     "cosmetic": "file:",
